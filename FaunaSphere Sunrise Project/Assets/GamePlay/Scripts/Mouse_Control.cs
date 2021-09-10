@@ -12,13 +12,23 @@ public class Mouse_Control : MonoBehaviour
     public Vector2 targetPosition;
     //That position relative to the players current position (what direction and how far did you click?)
     public Vector2 relativePosition;
+    //Setting animator states
+    public Animator animator;
+ 
 
     // 2 - Store the movement
     private Vector2 movement;
 
+
     void Update()
     {
-        // 3 - Retrieve the mouse position
+        Move();
+
+      
+    }
+
+    private void Move ()
+    { // 3 - Retrieve the mouse position
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -29,6 +39,7 @@ public class Mouse_Control : MonoBehaviour
         relativePosition = new Vector2(
             targetPosition.x - gameObject.transform.position.x,
             targetPosition.y - gameObject.transform.position.y);
+
     }
 
     void FixedUpdate()
@@ -56,4 +67,6 @@ public class Mouse_Control : MonoBehaviour
         GetComponent<Rigidbody2D>().velocity = movement;
 
     }
+
+
 }
