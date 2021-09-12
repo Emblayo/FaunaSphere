@@ -9,9 +9,13 @@ public class PlayerControls : MonoBehaviour
     public Animator animator;
     private bool IsMoving;
 
+    public List<string> inventory;
+
+
     void Start()
     {
         target = transform.position;
+        inventory = new List<string>();
 
     }
 
@@ -48,4 +52,15 @@ public class PlayerControls : MonoBehaviour
 
     }
 
+    //Interact a collider
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Collectable"))
+        {
+            string itemType = collision.gameObject.GetComponent<CollectableScript>().itemType;
+            inventory.Add(itemType);
+            print("Inventory length"+ inventory.Count);
+            Destroy(collision.gameObject);
+        }
+    }
 }
