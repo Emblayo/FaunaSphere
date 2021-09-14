@@ -494,6 +494,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8678049383571541602, guid: 9c09aae74957b034fad6a02b2a2a64d2, type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8892493036299290144, guid: 9c09aae74957b034fad6a02b2a2a64d2, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -876,6 +880,10 @@ PrefabInstance:
     - target: {fileID: 5954068637510514859, guid: 6702df0dfd28894438b040df6c66bed3, type: 3}
       propertyPath: m_Name
       value: UIPrefab_splashScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 5954068637510514859, guid: 6702df0dfd28894438b040df6c66bed3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6702df0dfd28894438b040df6c66bed3, type: 3}
