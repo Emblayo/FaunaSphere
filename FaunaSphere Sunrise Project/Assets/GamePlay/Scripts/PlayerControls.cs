@@ -12,13 +12,13 @@ public class PlayerControls : MonoBehaviour
     void Start()
     {
         target = transform.position;
-
     }
 
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
+            //Movement
             target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             target.z = transform.position.z;
             
@@ -35,6 +35,7 @@ public class PlayerControls : MonoBehaviour
         }
         transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
 
+        //Animation states
         if (transform.position == target) { IsMoving = false; }
         if (transform.position != target) { IsMoving = true; }
 
@@ -45,7 +46,12 @@ public class PlayerControls : MonoBehaviour
     void FixedUpdate()
     {
         
+    }
 
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        target = transform.position;
     }
 
 }
