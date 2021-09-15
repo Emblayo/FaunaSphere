@@ -18,7 +18,21 @@ public class InteractableObject : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Destroy(gameObject);
+        Debug.Log("Clicked on a object");
     }
+
+    void OnMouseOver()
+    {
+        //If your mouse hovers over the GameObject with the script attached
+        GetComponent<SpriteRenderer>().color = Color.yellow;
+    }
+
+    void OnMouseExit()
+    {
+        //The mouse is no longer hovering over the GameObject
+        
+        GetComponent<SpriteRenderer>().color = Color.white;
+    }
+
 
 }
