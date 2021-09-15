@@ -41,6 +41,7 @@ public class PlayerControls : MonoBehaviour
 
         if (IsMoving == true) animator.SetBool("IsMoving", true);
         if (IsMoving == false) animator.SetBool("IsMoving", false);
+
     }
 
     void FixedUpdate()
@@ -48,7 +49,7 @@ public class PlayerControls : MonoBehaviour
         
     }
 
-
+    //Stops the movement on collision
     void OnCollisionEnter2D(Collision2D col)
     {
         target = transform.position;

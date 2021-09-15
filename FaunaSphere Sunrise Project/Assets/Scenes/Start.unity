@@ -494,9 +494,29 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8678049383571541602, guid: 9c09aae74957b034fad6a02b2a2a64d2, type: 3}
-      propertyPath: m_PixelsPerUnitMultiplier
-      value: 1
+    - target: {fileID: 8209873586235104132, guid: 9c09aae74957b034fad6a02b2a2a64d2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 43
+      objectReference: {fileID: 0}
+    - target: {fileID: 8209873586235104132, guid: 9c09aae74957b034fad6a02b2a2a64d2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.0000023842
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439486552754522111, guid: 9c09aae74957b034fad6a02b2a2a64d2, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1096.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439486552754522111, guid: 9c09aae74957b034fad6a02b2a2a64d2, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 273.5215
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439486552754522111, guid: 9c09aae74957b034fad6a02b2a2a64d2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 148.60493
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439486552754522111, guid: 9c09aae74957b034fad6a02b2a2a64d2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 34.672096
       objectReference: {fileID: 0}
     - target: {fileID: 8892493036299290144, guid: 9c09aae74957b034fad6a02b2a2a64d2, type: 3}
       propertyPath: m_Pivot.x
@@ -885,6 +905,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9218745384472079392, guid: 6702df0dfd28894438b040df6c66bed3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 59.424072
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6702df0dfd28894438b040df6c66bed3, type: 3}
 --- !u!1 &1348126541 stripped
@@ -904,6 +928,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62afe713262c4ed4ca00c5b46c7648e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delay: 4
 --- !u!1 &1399788947
 GameObject:
   m_ObjectHideFlags: 0

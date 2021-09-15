@@ -761,8 +761,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 156, y: 54}
-  m_SizeDelta: {x: 1077.3, y: 252.1773}
+  m_AnchoredPosition: {x: 162.66699, y: 48.444225}
+  m_SizeDelta: {x: 1090.634, y: 263.2889}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2109666052758460526
 CanvasRenderer:
@@ -801,7 +801,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1.5
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &4364465190328552496
 GameObject:
   m_ObjectHideFlags: 0
@@ -1428,8 +1428,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 94, y: 0.0000023842}
-  m_SizeDelta: {x: 763.5455, y: 192.521}
+  m_AnchoredPosition: {x: 77.3327, y: 4.4447}
+  m_SizeDelta: {x: 796.8803, y: 210.2997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1335385263103404591
 CanvasRenderer:
@@ -2700,6 +2700,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: d69fce87e8d88694cb2cd882cc846cdd, type: 3}
+    - target: {fileID: 2710641435382959555, guid: 9b8d6e22c0da6554d906475e90217aaf, type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3838565161873454078, guid: 9b8d6e22c0da6554d906475e90217aaf, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1

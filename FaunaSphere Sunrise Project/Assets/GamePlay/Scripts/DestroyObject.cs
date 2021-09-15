@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DestroyObject : MonoBehaviour
 {
+    public float delay = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -14,6 +15,6 @@ public class DestroyObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Destroy(gameObject,15f);
+        Destroy(gameObject, delay);
     }
 }
