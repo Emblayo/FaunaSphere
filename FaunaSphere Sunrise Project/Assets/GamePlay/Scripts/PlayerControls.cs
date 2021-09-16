@@ -1,5 +1,6 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.EventSystems;
 using UnityEngine;
 
 public class PlayerControls : MonoBehaviour
@@ -17,34 +18,17 @@ public class PlayerControls : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        Movement();
+
+        //Checking if the mouse is over UI
+        if (EventSystem.current.IsPointerOverGameObject())
         {
-            //Movement
-            target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            target.z = transform.position.z;
-            
-            //Flips the character if they aren't facing the right way
-            //and flips the UI so it always faces to the right
-            if (target.x < transform.position.x && gameObject.transform.localScale.x > 0)
-            {
-                transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
-                PlayerUI.transform.rotation = Quaternion.Euler(0, 180f, 0);
-            }
-            else if (target.x > transform.position.x && gameObject.transform.localScale.x < 0)
-            {
-                transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
-                PlayerUI.transform.rotation = Quaternion.Euler(0, 0f, 0);
-            }
-            
+            Debug.Log("Its over UI elements");
         }
-        transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
-
-        //Animation states
-        if (transform.position == target) { IsMoving = false; }
-        if (transform.position != target) { IsMoving = true; }
-
-        if (IsMoving == true) animator.SetBool("IsMoving", true);
-        if (IsMoving == false) animator.SetBool("IsMoving", false);
+        else
+        {
+            Debug.Log("Its NOT over UI elements");
+        }
 
     }
 
@@ -58,5 +42,38 @@ public class PlayerControls : MonoBehaviour
     {
         target = transform.position;
     }
+
+    private void Movement()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            //Movement
+            target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            target.z = transform.position.z;
+
+            //Flips the character if they aren't facing the right way
+            //and flips the UI so it always faces to the right
+            if (target.x < transform.position.x && gameObject.transform.localScale.x > 0)
+            {
+                transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+                PlayerUI.transform.rotation = Quaternion.Euler(0, 180f, 0);
+            }
+            else if (target.x > transform.position.x && gameObject.transform.localScale.x < 0)
+            {
+                transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+                PlayerUI.transform.rotation = Quaternion.Euler(0, 0f, 0);
+            }
+
+        }
+        transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
+
+        //Animation states
+        if (transform.position == target) { IsMoving = false; }
+        if (transform.position != target) { IsMoving = true; }
+
+        if (IsMoving == true) animator.SetBool("IsMoving", true);
+        if (IsMoving == false) animator.SetBool("IsMoving", false);
+    }
+    
 
 }
