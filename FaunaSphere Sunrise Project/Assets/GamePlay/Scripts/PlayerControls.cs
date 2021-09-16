@@ -20,15 +20,7 @@ public class PlayerControls : MonoBehaviour
     {
         Movement();
 
-        //Checking if the mouse is over UI
-        if (EventSystem.current.IsPointerOverGameObject())
-        {
-            Debug.Log("Its over UI elements");
-        }
-        else
-        {
-            Debug.Log("Its NOT over UI elements");
-        }
+        
 
     }
 
@@ -47,6 +39,20 @@ public class PlayerControls : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            //Checking if the mouse is over UI
+            if (EventSystem.current.IsPointerOverGameObject())
+            {
+                Debug.Log("Its over UI elements");
+                return;
+            }
+            else
+            {
+                Debug.Log("Its NOT over UI elements");
+            }
+
+
+
+
             //Movement
             target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             target.z = transform.position.z;
