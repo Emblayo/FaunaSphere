@@ -8,6 +8,7 @@ public class PlayerControls : MonoBehaviour
     private Vector3 target;
     public Animator animator;
     private bool IsMoving;
+    public GameObject PlayerUI;
 
     void Start()
     {
@@ -22,14 +23,17 @@ public class PlayerControls : MonoBehaviour
             target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             target.z = transform.position.z;
             
-            //Flips the character if they aren't facing the right way:
+            //Flips the character if they aren't facing the right way
+            //and flips the UI so it always faces to the right
             if (target.x < transform.position.x && gameObject.transform.localScale.x > 0)
             {
                 transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+                PlayerUI.transform.rotation = Quaternion.Euler(0, 180f, 0);
             }
             else if (target.x > transform.position.x && gameObject.transform.localScale.x < 0)
             {
                 transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+                PlayerUI.transform.rotation = Quaternion.Euler(0, 0f, 0);
             }
             
         }
