@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: OutlineGlowMat
-  m_Shader: {fileID: -6465566751694194690, guid: af5244b0855b82a4ab9b20201c93e242, type: 3}
+  m_Name: OutlineRenderedMat
+  m_Shader: {fileID: -6465566751694194690, guid: 480af336002eefd4890d30757c494e37, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: -1878201022037785216, guid: 663d4039126f19347bc0d9fcd96c4194, type: 3}
+        m_Texture: {fileID: 2800000, guid: 89f85f861a00de64a89217ecfe9f2591, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -36,7 +36,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_924863a5a93f4e04bf5c6bb693beb485: 0.95
+    - Vector1_68348c3901104d5d8b7460bb3e9f1ada: 0.04
     m_Colors:
-    - Color_98cca8a5e1cb4752a52b809e7f0ebdf9: {r: 0.4057896, g: 1, b: 0.1745283, a: 0}
+    - Color_5ace9fc4576547e5aa5c2332acb6abd8: {r: 0.1300379, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
