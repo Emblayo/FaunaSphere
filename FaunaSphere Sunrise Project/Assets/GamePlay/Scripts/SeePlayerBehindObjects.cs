@@ -11,6 +11,12 @@ public class SeePlayerBehindObjects : MonoBehaviour
         if (collider2D.gameObject.CompareTag("OccludesPlayer"))
         {
             Debug.Log("Entered an occludable region!");
+
+            //SpriteRenderer spriteRenderer = collider2D.GetComponent<SpriteRenderer>();
+            //if (spriteRenderer != null)
+            //{
+               // spriteRenderer.color = new Color(1.0f, 1.0f, 1.0f, 0.5f);
+           // }
         }
     }
 
@@ -19,7 +25,14 @@ public class SeePlayerBehindObjects : MonoBehaviour
         if (collider2D.gameObject.CompareTag("OccludesPlayer"))
         {
             Debug.Log("Exited an occludable region!");
+
+            //SpriteRenderer spriteRenderer = collider2D.GetComponent<SpriteRenderer>();
+           // if (spriteRenderer != null)
+            //{
+               // spriteRenderer.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+            //}
         }
     }
+    
 
 }
