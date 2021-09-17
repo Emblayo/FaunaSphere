@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Player
+  m_Name: GlowUnlitMat
   m_Shader: {fileID: -6465566751694194690, guid: c0402ab69dce5f14bb8597d0b03cbc89, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
