@@ -38,16 +38,16 @@ public class InteractableObject : MonoBehaviour
         PlayerAnimator.SetTrigger("Action");
     }
 
+    //If your mouse hovers over the GameObject with the script attached
     void OnMouseOver()
-    {
-        //If your mouse hovers over the GameObject with the script attached
+    {   
         rend.sharedMaterial = material[1];
         UI.SetActive(true);
     }
 
+    //The mouse is no longer hovering over the GameObject
     void OnMouseExit()
-    {
-        //The mouse is no longer hovering over the GameObject
+    {  
         rend.sharedMaterial = material[0];
         UI.SetActive(false);
     }
