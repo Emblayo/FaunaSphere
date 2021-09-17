@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 459271692976124292}
   m_Layer: 0
   m_Name: Prefab_Interactable
-  m_TagString: Untagged
+  m_TagString: OccludesPlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -225,7 +225,7 @@ GameObject:
   - component: {fileID: 5697020989309798926}
   m_Layer: 0
   m_Name: Asset
-  m_TagString: Untagged
+  m_TagString: OccludesPlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
