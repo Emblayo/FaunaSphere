@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class InteractableObject : MonoBehaviour
 {
+    public Material[] material;
+    Renderer rend;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        rend = GetComponent<Renderer>();
+        rend.enabled = true;
+        rend.sharedMaterial = material[0];
     }
 
     // Update is called once per frame
@@ -24,14 +29,14 @@ public class InteractableObject : MonoBehaviour
     void OnMouseOver()
     {
         //If your mouse hovers over the GameObject with the script attached
-        GetComponent<SpriteRenderer>().color = Color.yellow;
+        rend.sharedMaterial = material[1];
     }
 
     void OnMouseExit()
     {
         //The mouse is no longer hovering over the GameObject
-        
-        GetComponent<SpriteRenderer>().color = Color.white;
+        rend.sharedMaterial = material[0];
+
     }
 
 
