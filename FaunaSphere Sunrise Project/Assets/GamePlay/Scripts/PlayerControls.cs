@@ -20,8 +20,6 @@ public class PlayerControls : MonoBehaviour
     {
         Movement();
 
-        
-
     }
 
     void FixedUpdate()
@@ -50,9 +48,6 @@ public class PlayerControls : MonoBehaviour
                 Debug.Log("Its NOT over UI elements");
             }
 
-
-
-
             //Movement
             target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             target.z = transform.position.z;
@@ -71,9 +66,10 @@ public class PlayerControls : MonoBehaviour
             }
 
         }
+
         transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
 
-        //Animation states
+        //Animation states for running
         if (transform.position == target) { IsMoving = false; }
         if (transform.position != target) { IsMoving = true; }
 

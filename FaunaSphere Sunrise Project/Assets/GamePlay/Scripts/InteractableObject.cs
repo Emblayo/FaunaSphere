@@ -6,8 +6,16 @@ public class InteractableObject : MonoBehaviour
 {
     public Material[] material;
     Renderer rend;
-
     public GameObject UI;
+    public GameObject Player;
+    Animator PlayerAnimator;
+    private bool Action;
+
+
+    void Awake()
+    {
+        PlayerAnimator = Player.GetComponent<Animator>();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +35,7 @@ public class InteractableObject : MonoBehaviour
     private void OnMouseDown()
     {
         Debug.Log("Clicked on a object");
+        PlayerAnimator.SetTrigger("Action");
     }
 
     void OnMouseOver()
