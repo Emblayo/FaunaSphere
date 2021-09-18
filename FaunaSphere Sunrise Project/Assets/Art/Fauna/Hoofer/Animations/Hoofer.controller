@@ -68,7 +68,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: d101fd47a5c9da541ab88588af3c1ecd, type: 2}
+  m_Motion: {fileID: 7400000, guid: 12aa62016ff1dea46a913d3155c925c4, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -130,7 +130,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Sniffer
+  m_Name: Hoofer
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: IsMoving
@@ -180,7 +180,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: da87e7ebb036da543bd08264d4801225, type: 2}
+  m_Motion: {fileID: 7400000, guid: 7e563392abf27dc4c914af6504d1b9b4, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -233,7 +233,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: f724f31f152111a469b7cfc0d164696b, type: 2}
+  m_Motion: {fileID: 7400000, guid: 1ac30f29761151b42b46c61e358ada9b, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -315,7 +315,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 421b06f41ff03b84abb5972334a74fcb, type: 2}
+  m_Motion: {fileID: 7400000, guid: aaa6aae2bccc2cc4ab5a1d3447d6517e, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

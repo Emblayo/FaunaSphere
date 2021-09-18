@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - OccludesPlayer
+  - Sniffer
+  - Scratcher
+  - Hoofer
   layers:
   - Default
   - TransparentFX
