@@ -217,6 +217,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 831815114959129720, guid: 6653dd3a120fb694f8f2e49cffcefce3, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 18565a21d7a50dc4a92460ff7d035e1e, type: 2}
+    - target: {fileID: 2210973754142480936, guid: 6653dd3a120fb694f8f2e49cffcefce3, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3599147258116987682, guid: 6653dd3a120fb694f8f2e49cffcefce3, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -300,6 +308,10 @@ PrefabInstance:
     - target: {fileID: 3599147258116987682, guid: 6653dd3a120fb694f8f2e49cffcefce3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345980148534885204, guid: 6653dd3a120fb694f8f2e49cffcefce3, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4345980148534885204, guid: 6653dd3a120fb694f8f2e49cffcefce3, type: 3}
       propertyPath: m_SizeDelta.x
