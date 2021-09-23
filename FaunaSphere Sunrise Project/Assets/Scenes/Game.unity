@@ -4413,8 +4413,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.9536, y: 7.8051}
-  m_SizeDelta: {x: 763.5332, y: 414.4101}
+  m_AnchoredPosition: {x: -3.9536, y: -1.4129}
+  m_SizeDelta: {x: 833.1802, y: 473.8148}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &533059037
 MonoBehaviour:
@@ -5471,6 +5471,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5362011268792867436, guid: 0f2fb4e6a243eca42a282e6584cd3f1d, type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5362011268792867438, guid: 0f2fb4e6a243eca42a282e6584cd3f1d, type: 3}
       propertyPath: m_Name
       value: UICanvas
@@ -5618,7 +5622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
