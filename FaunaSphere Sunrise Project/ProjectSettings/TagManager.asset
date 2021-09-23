@@ -8,6 +8,7 @@ TagManager:
   - Sniffer
   - Scratcher
   - Hoofer
+  - Scooter
   layers:
   - Default
   - TransparentFX
