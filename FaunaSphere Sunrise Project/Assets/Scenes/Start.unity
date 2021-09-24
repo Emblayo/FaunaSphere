@@ -1033,6 +1033,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UIPopup_CreateFauna
       objectReference: {fileID: 0}
+    - target: {fileID: 8892493036299290145, guid: 9c09aae74957b034fad6a02b2a2a64d2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8898317782010523194, guid: 9c09aae74957b034fad6a02b2a2a64d2, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
