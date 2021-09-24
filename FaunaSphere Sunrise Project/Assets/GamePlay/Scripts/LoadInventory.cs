@@ -4,7 +4,7 @@ using UnityEngine;
 using PlayFab;
 using PlayFab.ClientModels;
 
-
+/*
 public class LoadInventory : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -26,7 +26,7 @@ public class LoadInventory : MonoBehaviour
                 Debug.Log("Items (" + eachItem.DisplayName + "): " + eachItem.ItemInstanceId);
         
     }
-
+    */
 
 
 
@@ -43,4 +43,4 @@ public class LoadInventory : MonoBehaviour
         }
     }*/
     
-}
+//}

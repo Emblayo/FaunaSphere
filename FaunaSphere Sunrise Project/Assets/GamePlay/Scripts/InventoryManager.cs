@@ -1,4 +1,5 @@
 using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -23,7 +24,7 @@ public class InventoryManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    private void UpdateSlots()
+    public void UpdateSlots()
     {
         slots = new Transform[slotHolder.childCount];
         isFull = new bool[slotHolder.childCount];
@@ -33,32 +34,61 @@ public class InventoryManager : MonoBehaviour
             slots[i] = slotHolder.GetChild(i);
         }
         for (int i = 0; i < slots.Length; i++){
-            if (slots[i].childCount < 3)
+            if (slots[i].childCount < 4)
             {
                 isFull[i] = false;
             }
-            else if (slots[i].childCount>0)
+            else if (slots[i].childCount>3)
             {
                 isFull[i] = true;
             }
         }
     }
-    public void AddItem(GameObject item)
+    
+    public void AddItem(GameObject item) 
     {
-        GrantItem(item.name);
 
-        for (int i=0;i<slots.Length; i++)
+        for (int i = 0; i < slots.Length; i++)
         {
-            if (isFull[i] == false)
-            {
-                print("item added");
-                Instantiate(item, slots[i]);
+            
+                //print(item.name + "  " + slots[i].GetChild(4).name);
+
+
+
+                if (isFull[i] == false)
+                {
+
+                    
+                    Instantiate(item, slots[i]);
+                slots[i].GetChild(3).name = item.name;
+                TextMeshProUGUI counterObject = slots[i].GetComponentInChildren<TextMeshProUGUI>(true);
+                counterObject.text = "1";
+                counterObject.enabled = true;
                 UpdateSlots();
+                
                 break;
-            }
+
+                } else if (isFull[i] == true)
+                {
+                
+                    if (slots[i].GetChild(3).name == item.name)
+                    {
+                        //pull text, convert to int and add 1, convert back to string and set
+                        TextMeshProUGUI counterObject = slots[i].GetComponentInChildren<TextMeshProUGUI>(true);
+                        string notInt = counterObject.text;
+                        int intcount = Int32.Parse(notInt);
+                        intcount = intcount + 1;
+                        counterObject.text = intcount.ToString();
+                    
+                        break;
+                    }
+                }
+            
+           
+
         }
     }
-    public void GrantItem(string itemType)
+    public void GrantItem(string itemType) // adds item to PlayFab account
     {
         //var request = (itemType + "ID", PlayerPrefs.GetString("PlayFabID"));
         //PlayFabServerAPI.GrantItemsToUser();
@@ -81,30 +111,13 @@ public class InventoryManager : MonoBehaviour
 
         PlayFabServerAPI.GrantItemsToUser(request, LogSuccess, LogFailure);
         
-        print(itemIds[0]);
-        print(PlayerPrefs.GetString("PlayFabID"));
+        
 
         GetInventory();
         //Experimental:
-        void GetInventory()
-        {
-            PlayFabClientAPI.GetUserInventory(new PlayFab.ClientModels.GetUserInventoryRequest(), OnGetInventory, error => Debug.LogError(error.GenerateErrorReport()));
-            print("get inventory");
-        }
         
-    void OnGetInventory(PlayFab.ClientModels.GetUserInventoryResult result)
-        {
-            Debug.Log("Received the following items:");
-            foreach (var eachItem in result.Inventory)
-                Debug.Log("Items (" + eachItem.DisplayName + "): " + eachItem.ItemInstanceId + "Quantity of item:"+ eachItem.RemainingUses);
-            print(result.Inventory);
-
-            //Update currency amounts
-            result.VirtualCurrency.TryGetValue("LX", out lux);
-            print("Lux amount:" + lux);
-            PlayerPrefs.SetString("Lux Amount", lux.ToString());
-            luxDisplay.text = lux.ToString();
-        }
+        
+    
     }
     private void LogSuccess(GrantItemsToUserResult grantItem)
     {
@@ -113,5 +126,24 @@ public class InventoryManager : MonoBehaviour
     private void LogFailure(PlayFabError error)
     {
         Debug.LogError(error.GenerateErrorReport());
+    }
+
+    public void GetInventory()
+    {
+        PlayFabClientAPI.GetUserInventory(new PlayFab.ClientModels.GetUserInventoryRequest(), OnGetInventory, error => Debug.LogError(error.GenerateErrorReport()));
+        
+    }
+    public void OnGetInventory(PlayFab.ClientModels.GetUserInventoryResult result)
+    {
+        Debug.Log("Received the following items:");
+        foreach (var eachItem in result.Inventory)
+            Debug.Log("Items (" + eachItem.DisplayName + "): " + eachItem.ItemInstanceId + "Quantity of item:" + eachItem.RemainingUses);
+        
+
+        //Update currency amounts
+        result.VirtualCurrency.TryGetValue("LX", out lux);
+        print("Lux amount:" + lux);
+        PlayerPrefs.SetString("Lux Amount", lux.ToString());
+        luxDisplay.text = lux.ToString();
     }
 }
