@@ -19,28 +19,25 @@ public class CreateFauna : MonoBehaviour
 
         PlayFabServerAPI.GrantCharacterToUser(request, LogSuccess, LogFailure);
 
-        
-        FirstFaunaCreate();
+
+        //FirstFaunaCreate();
+
 
     }
     private void LogSuccess(PlayFab.ServerModels.GrantCharacterToUserResult grantFauna)
     {
         PlayerPrefs.SetString("CharacterID", grantFauna.CharacterId);
 
-        //Experiment
-        string species = PlayerPrefs.GetString("Species");
-        string color = PlayerPrefs.GetString("Color");
-        Dictionary<string, string> faunaData = new Dictionary<string, string>()
-    {
-      {"Species", species},
-      {"Color",color},
+        FirstFaunaCreate();
 
-    };
-        grantFauna.CustomData = faunaData;
-        PullCharData();
+        //grantFauna.CustomData = faunaData;
+        //PullCharData();
+
         //
 
         print("Fauna added to playfab account. CharacterID= " + PlayerPrefs.GetString("CharacterID"));
+
+        
     }
     private void LogFailure(PlayFabError error)
     {
@@ -56,33 +53,7 @@ public class CreateFauna : MonoBehaviour
         PlayFabClientAPI.GetCharacterData(dataRequest, GetCharacterDataSuccess, errorCallbackGetData);
     }
 
-    public void FirstFaunaCreate() {
-        
-        string species = PlayerPrefs.GetString("Species");
-        string color = PlayerPrefs.GetString("Color");
-        Dictionary<string, string> faunaData = new Dictionary<string, string>()
-    {
-      {"Species", species}, 
-      {"Color",color},                 
-
-    };
-        PlayFab.ClientModels.UpdateCharacterDataRequest updateRequest = new PlayFab.ClientModels.UpdateCharacterDataRequest();
-
-        updateRequest.CharacterId= PlayerPrefs.GetString("CharacterID");
-        print("CharacterId: "+updateRequest.CharacterId);
-        updateRequest.Data = faunaData;
-
-        PlayFabClientAPI.UpdateCharacterData(updateRequest, (result) =>
-        {
-            result.CustomData = faunaData;
-            Debug.Log("Successfully updated user data");
-        }, (error) =>
-        {
-            Debug.Log("Got error setting user data Ancestor to Arthur");
-            Debug.Log(error.ErrorMessage);
-        });
-
-    }
+   
 
     private void GetCharacterDataSuccess(PlayFab.ClientModels.GetCharacterDataResult dataResult)
     {
@@ -92,6 +63,41 @@ public class CreateFauna : MonoBehaviour
     {
         Debug.LogError(error.GenerateErrorReport());
     }
+
+
+    public void FirstFaunaCreate()
+    {
+
+
+
+        string species = PlayerPrefs.GetString("Species");
+        string color = PlayerPrefs.GetString("Color");
+        Dictionary<string, string> faunaData = new Dictionary<string, string>(){
+        {"Species", species},
+        {"Color",color},
+        };
+
+        PlayFab.ServerModels.UpdateCharacterDataRequest updateRequest = new PlayFab.ServerModels.UpdateCharacterDataRequest();
+
+        updateRequest.CharacterId = PlayerPrefs.GetString("CharacterID");
+        updateRequest.PlayFabId = PlayerPrefs.GetString("PlayFabID");
+        print("CharacterId: " + updateRequest.CharacterId + "  " + PlayerPrefs.GetString("CharacterID"));
+        print("PlayFabId:" + updateRequest.PlayFabId);
+        updateRequest.Data = faunaData;
+
+        PlayFabServerAPI.UpdateCharacterData(updateRequest, (result) =>
+        {
+            //result.CustomData = faunaData;
+
+            Debug.Log("Successfully updated user data");
+        }, (error) =>
+        {
+            Debug.Log("Got error setting user data Ancestor to Arthur");
+            Debug.Log(error.ErrorMessage);
+        });
+
+    }
+
 
 
 
