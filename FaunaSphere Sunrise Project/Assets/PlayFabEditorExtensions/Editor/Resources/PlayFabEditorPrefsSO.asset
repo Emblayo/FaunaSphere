@@ -20,4 +20,4 @@ MonoBehaviour:
   LocalCloudScriptPath: 
   PanelIsShown: 0
   curMainMenuIdx: 1
-  curSubMenuIdx: 2
+  curSubMenuIdx: 0

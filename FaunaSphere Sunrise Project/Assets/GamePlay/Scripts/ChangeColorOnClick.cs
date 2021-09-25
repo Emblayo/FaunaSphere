@@ -8,6 +8,7 @@ public class ChangeColorOnClick : MonoBehaviour
     
     public GameObject Fauna;
     public Color colorPicker;
+    public string firstFaunaColor;
 
     // Start is called before the first frame update
     public void ChangeColor()
@@ -21,6 +22,7 @@ public class ChangeColorOnClick : MonoBehaviour
             {
                 var renderer = sprite.GetComponent<SpriteRenderer>();
                 renderer.color = colorPicker;
+                PlayerPrefs.SetString("Color", firstFaunaColor);
             }
         }
     }

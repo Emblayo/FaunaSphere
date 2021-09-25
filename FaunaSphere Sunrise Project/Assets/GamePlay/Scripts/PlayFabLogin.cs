@@ -1,7 +1,9 @@
 ﻿using PlayFab;
 using PlayFab.ClientModels;
 using PlayFab.ServerModels;
+using PlayFab.AuthenticationModels;
 using UnityEngine;
+using UnityEditor;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
@@ -21,14 +23,19 @@ public class PlayFabLogin : MonoBehaviour
 
     public void Start()
     {
+        
+
+
         //Note: Setting title Id here can be skipped if you have set the value in Editor Extensions already.
         if (string.IsNullOrEmpty(PlayFabSettings.TitleId))
         {
             PlayFabSettings.TitleId = "144"; // Please change this value to your own titleId from PlayFab Game Manager
         }
+
+        PlayFabClientAPI.ForgetAllCredentials();
         //To delete accounts:
         //PlayerPrefs.DeleteAll(); 
-;        //var request = new LoginWithCustomIDRequest { CustomId = "GettingStartedGuide", CreateAccount = true };
+        ;        //var request = new LoginWithCustomIDRequest { CustomId = "GettingStartedGuide", CreateAccount = true };
          //PlayFabClientAPI.LoginWithCustomID(request, OnLoginSuccess, OnLoginFailure);
 
         /*if (PlayerPrefs.HasKey("EMAIL"))
@@ -172,7 +179,7 @@ public class PlayFabLogin : MonoBehaviour
         PlayerPrefs.SetString("EMAIL", userEmail);
         PlayerPrefs.SetString("PASSWORD", userPassword);
         PlayerPrefs.SetString("USERNAME", username);
-        loginPanel.SetActive(false); //Hides login/registration screen
+        //loginPanel.SetActive(false); //Hides login/registration screen
         PlayerPrefs.SetString("PlayFabID", result.PlayFabId);
         //Load Fauna creation screen
         SceneManager.LoadScene("Start");
@@ -189,6 +196,8 @@ public class PlayFabLogin : MonoBehaviour
     }
     private void OnRegisterFailure (PlayFabError error)
     {
+        
+
         Debug.LogError(error.GenerateErrorReport());
     }
     public void GetUserEmail(string emailIn)

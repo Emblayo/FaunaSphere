@@ -22,6 +22,7 @@ public class ChangeFaunaOnTag : MonoBehaviour
             //Debug.Log("This is a Sniffer");
             Sniffer.SetActive(true);
             Hoofer.SetActive(false);
+            PlayerPrefs.SetString("Species", "Sniffer");
         }
 
         if (gameObject.CompareTag("Hoofer"))
@@ -29,6 +30,7 @@ public class ChangeFaunaOnTag : MonoBehaviour
             //Debug.Log("This is a Hoofer");
             Sniffer.SetActive(false);
             Hoofer.SetActive(true);
+            PlayerPrefs.SetString("Species", "Hoofer");
         }
 
     }
