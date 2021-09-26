@@ -222,8 +222,6 @@ public class PlayFabLogin : MonoBehaviour
         
         PlayFabClientAPI.LoginWithPlayFab(request, OnLoginSuccess, OnLoginFailure);
 
-        
-        
     }
 
 }
