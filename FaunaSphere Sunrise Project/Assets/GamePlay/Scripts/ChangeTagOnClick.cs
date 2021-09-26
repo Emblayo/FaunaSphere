@@ -11,7 +11,7 @@ public class ChangeTagOnClick : MonoBehaviour
     public void ChangeTag()
     {
        Fauna.tag = Tag;
-
+        PlayerPrefs.SetString("Species", Tag);
         Debug.Log("Changing the Tag");
     }
 
