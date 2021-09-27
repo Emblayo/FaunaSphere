@@ -197,7 +197,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 540682558}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 593.1971, y: 238.15497, z: -24.662502}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1984239203}
@@ -844,6 +844,23 @@ PrefabInstance:
     - target: {fileID: 3010815740252741801, guid: 9c09aae74957b034fad6a02b2a2a64d2, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3350029722101629134, guid: 9c09aae74957b034fad6a02b2a2a64d2, type: 3}
+      propertyPath: dialogue.name
+      value: Amelia
+      objectReference: {fileID: 0}
+    - target: {fileID: 3350029722101629134, guid: 9c09aae74957b034fad6a02b2a2a64d2, type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: Hello new caretaker, my name is Amelia and I am apparently a jalapeno
+        or something.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3350029722101629134, guid: 9c09aae74957b034fad6a02b2a2a64d2, type: 3}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: That's pretty neat?
+      objectReference: {fileID: 0}
+    - target: {fileID: 3350029722101629134, guid: 9c09aae74957b034fad6a02b2a2a64d2, type: 3}
+      propertyPath: dialogue.sentences.Array.data[2]
+      value: Let's play some FaunaSphere!
       objectReference: {fileID: 0}
     - target: {fileID: 3644121830423230823, guid: 9c09aae74957b034fad6a02b2a2a64d2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
