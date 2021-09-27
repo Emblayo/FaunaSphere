@@ -86,13 +86,14 @@ GameObject:
   - component: {fileID: 5954068637510514858}
   - component: {fileID: 5954068637510514853}
   - component: {fileID: 2951454909435986842}
+  - component: {fileID: 1348126542}
   m_Layer: 5
   m_Name: UIPrefab_splashScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5954068637510514858
 RectTransform:
   m_ObjectHideFlags: 0
@@ -153,6 +154,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1348126542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5954068637510514859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62afe713262c4ed4ca00c5b46c7648e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 4
 --- !u!1001 &3592577824867276647
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -238,7 +252,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5635399972549704519, guid: a8bedc17f50fd4d4d87cb8feabd6c069, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 59.42401
+      value: 59.424072
       objectReference: {fileID: 0}
     - target: {fileID: 5635399972549704519, guid: a8bedc17f50fd4d4d87cb8feabd6c069, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -274,6 +288,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5954068637510514858}
     m_Modifications:
+    - target: {fileID: 1632849500593833628, guid: ffa93bf9b912a69408b19eb47e8d5e39, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 3003121663
+      objectReference: {fileID: 0}
     - target: {fileID: 3044185791382385259, guid: ffa93bf9b912a69408b19eb47e8d5e39, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
