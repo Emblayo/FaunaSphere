@@ -33,7 +33,7 @@ public class PlayFabLogin : MonoBehaviour
         }
 
         PlayFabClientAPI.ForgetAllCredentials();
-        //To delete accounts:
+        //To delete account info stored in unity:
         //PlayerPrefs.DeleteAll(); 
         ;        //var request = new LoginWithCustomIDRequest { CustomId = "GettingStartedGuide", CreateAccount = true };
          //PlayFabClientAPI.LoginWithCustomID(request, OnLoginSuccess, OnLoginFailure);
@@ -72,6 +72,8 @@ public class PlayFabLogin : MonoBehaviour
         //InventoryManager loadInventory = FindObjectOfType<InventoryManager>();
         //loadInventory.GetInventory(); 
         InitialInventoryPull();
+        LoadFauna checkFauna = FindObjectOfType<LoadFauna>(); //runs script to check/load fauna
+        checkFauna.CheckFauna();
 
     }
     public void InitialInventoryPull()
@@ -108,7 +110,7 @@ public class PlayFabLogin : MonoBehaviour
             //find gameobject prefab of item using the name:
 
 
-            print(itemInput.name); // test to see if its finding the gameobject
+            //print(itemInput.name); // test to see if its finding the gameobject
             InventoryManager addItem = FindObjectOfType<InventoryManager>();
             addItem.AddItem(itemInput);
 
