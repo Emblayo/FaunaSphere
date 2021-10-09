@@ -12,6 +12,8 @@ public class LoadFauna : MonoBehaviour
     public GameObject Fauna;
     public Color color;
     public string firstFaunaColor;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -142,12 +144,10 @@ public class LoadFauna : MonoBehaviour
        string species = PlayerPrefs.GetString("ActiveFaunaSpecies");
         if(species == "Hoofer")
         {
-            Sniffer.SetActive(false);
-            Hoofer.SetActive(true);
+            Fauna.tag = "Hoofer";
         }
         else if(species == "Sniffer"){
-            Sniffer.SetActive(true);
-            Hoofer.SetActive(false);
+            Fauna.tag = "Sniffer";
         }
         else if(species == "Scooter")
         {
