@@ -89,6 +89,9 @@ public class CreateFauna : MonoBehaviour
         {
             //result.CustomData = faunaData;
 
+
+
+
             Debug.Log("Successfully updated user data");
         }, (error) =>
         {

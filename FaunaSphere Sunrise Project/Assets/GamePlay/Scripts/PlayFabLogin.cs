@@ -48,6 +48,7 @@ public class PlayFabLogin : MonoBehaviour
             //PlayFabClientAPI.LoginWithEmailAddress(request, OnLoginSuccess, OnLoginFailure);
             PlayFabClientAPI.LoginWithPlayFab(request, OnLoginSuccess, OnLoginFailure);
         }*/
+        /*
         if (PlayerPrefs.HasKey("USERNAME"))
         {
             userEmail = PlayerPrefs.GetString("EMAIL");
@@ -57,24 +58,35 @@ public class PlayFabLogin : MonoBehaviour
             var request = new LoginWithPlayFabRequest {Password = userPassword, TitleId = PlayFabSettings.TitleId, Username = username};
             //PlayFabClientAPI.LoginWithEmailAddress(request, OnLoginSuccess, OnLoginFailure);
             PlayFabClientAPI.LoginWithPlayFab(request, OnLoginSuccess, OnLoginFailure);
-        }
+        }*/
     }
     private void OnLoginSuccess(LoginResult result)
     {
         Debug.Log("Congratulations, you made your first successful API call!");
+        
+
         PlayerPrefs.SetString("EMAIL", userEmail);
         PlayerPrefs.SetString("PASSWORD", userPassword);
         PlayerPrefs.SetString("USERNAME", username);
         PlayerPrefs.SetString("PlayFabID", result.PlayFabId);
-        loginPanel.SetActive(false);
+        
 
         //Pull inventory data on login (works)
         //InventoryManager loadInventory = FindObjectOfType<InventoryManager>();
         //loadInventory.GetInventory(); 
         InitialInventoryPull();
-        LoadFauna checkFauna = FindObjectOfType<LoadFauna>(); //runs script to check/load fauna
+        LoadFauna checkFauna = FindObjectOfType<LoadFauna>();
         checkFauna.CheckFauna();
+        PlayFab.ClientModels.EntityTokenResponse token = result.EntityToken;
 
+        bool newCheck = result.NewlyCreated;
+        
+        if (newCheck)
+        {
+            //Load Fauna creation screen
+            SceneManager.LoadScene("Start");
+        }
+        loginPanel.SetActive(false);
     }
     public void InitialInventoryPull()
     {
@@ -88,7 +100,7 @@ public class PlayFabLogin : MonoBehaviour
         //Updates Lux:
         result.VirtualCurrency.TryGetValue("LX", out lux);
         print("Lux amount:" + lux);
-        PlayerPrefs.SetString("Lux Amount", lux.ToString());
+        PlayerPrefs.SetString("Lux Amount", lux.ToString());//just for testing purposes
         luxDisplay.text = lux.ToString();
 
 
@@ -224,6 +236,11 @@ public class PlayFabLogin : MonoBehaviour
         
         PlayFabClientAPI.LoginWithPlayFab(request, OnLoginSuccess, OnLoginFailure);
 
+        
+
+
+        //string usernameTest = request.Username;
+        //return usernameTest;
     }
 
 }
