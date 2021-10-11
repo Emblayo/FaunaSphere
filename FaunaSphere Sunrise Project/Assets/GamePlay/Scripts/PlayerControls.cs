@@ -7,13 +7,15 @@ public class PlayerControls : MonoBehaviour
 {
     public float speed = 1;
     private Vector3 target;
-    public Animator animator;
+    private Animator animator;
     private bool IsMoving;
     public GameObject PlayerUI;
 
     void Start()
     {
         target = transform.position;
+        animator = GetComponentInChildren<Animator>();
+
     }
 
     void Update()

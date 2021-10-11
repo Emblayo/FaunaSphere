@@ -14,7 +14,7 @@ public class InteractableObject : MonoBehaviour
 
     void Awake()
     {
-        PlayerAnimator = Player.GetComponent<Animator>();
+        PlayerAnimator = GetComponentInChildren<Animator>();
     }
 
     // Start is called before the first frame update

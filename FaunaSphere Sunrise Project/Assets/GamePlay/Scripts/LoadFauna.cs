@@ -13,6 +13,8 @@ public class LoadFauna : MonoBehaviour
     public GameObject Fauna;
     public Color color;
     public string firstFaunaColor;
+    public GameObject Avatar;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -188,10 +190,12 @@ public class LoadFauna : MonoBehaviour
         {
             Sniffer.SetActive(false);
             Hoofer.SetActive(true);
+            Avatar.tag = "Hoofer";
         }
         else if(species == "Sniffer"){
             Sniffer.SetActive(true);
             Hoofer.SetActive(false);
+            Avatar.tag = "Sniffer";
         }
         else if(species == "Scooter")
         {
