@@ -10,16 +10,28 @@ public class PlayerControls : MonoBehaviour
     private Animator animator;
     private bool IsMoving;
     public GameObject PlayerUI;
+    public GameObject FaunaHolder;
+
 
     void Start()
     {
         target = transform.position;
-        animator = GetComponentInChildren<Animator>();
+
+        
     }
 
     void Update()
     {
-        Movement();
+        
+        
+        if (PlayerPrefs.GetString("FaunaLoaded") == "true")
+        {
+
+            GameObject fauna = GameObject.FindGameObjectWithTag("Fauna");
+            animator = fauna.GetComponent<Animator>();
+
+            Movement();
+        }
 
     }
 

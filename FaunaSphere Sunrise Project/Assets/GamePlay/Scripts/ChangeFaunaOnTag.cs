@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ChangeFaunaOnTag : MonoBehaviour
 {
+    /*
     public GameObject Sniffer;
     public GameObject Hoofer;
 
@@ -34,5 +35,5 @@ public class ChangeFaunaOnTag : MonoBehaviour
         }
 
 
-    }
+    }*/
 }

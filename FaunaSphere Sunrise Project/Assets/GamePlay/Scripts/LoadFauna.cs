@@ -12,13 +12,14 @@ public class LoadFauna : MonoBehaviour
     public GameObject Fauna;
     public Color color;
     public string firstFaunaColor;
+    public Transform faunaHolder;
 
 
     // Start is called before the first frame update
     void Start()
     {
         //CheckFauna();
-
+        PlayerPrefs.SetString("FaunaLoaded", "false");
     }
     //If the player has logged in (one way to check is if PlayerPrefs Username exists?) and the user has at least 1 character:
     //pull the character info for the 1st character created and use that to generate the fauna displayed
@@ -141,13 +142,24 @@ public class LoadFauna : MonoBehaviour
 
     public void ChangeSpecies()
     {
-       string species = PlayerPrefs.GetString("ActiveFaunaSpecies");
+        
+    string species = PlayerPrefs.GetString("ActiveFaunaSpecies");
         if(species == "Hoofer")
         {
-            Fauna.tag = "Hoofer";
+            //Fauna.tag = "Hoofer";
+            //find gameobject prefab of item using the name:
+            string filepath = "Fauna/" + species+"_Prefab_01";
+            GameObject inputFauna = Resources.Load<GameObject>(filepath);
+            Instantiate(inputFauna, faunaHolder);
+            
+            PlayerPrefs.SetString("FaunaLoaded", "true");
         }
         else if(species == "Sniffer"){
-            Fauna.tag = "Sniffer";
+            //Fauna.tag = "Sniffer";
+            string filepath = "Fauna/" + species + "_Prefab_01";
+            GameObject inputFauna = Resources.Load<GameObject>(filepath);
+            Instantiate(inputFauna, faunaHolder);
+            PlayerPrefs.SetString("FaunaLoaded", "true");
         }
         else if(species == "Scooter")
         {

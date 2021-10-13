@@ -3226,7 +3226,7 @@ GameObject:
   - component: {fileID: 2093910578633093904}
   m_Layer: 0
   m_Name: Hoofer_Prefab_01
-  m_TagString: Untagged
+  m_TagString: Fauna
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
