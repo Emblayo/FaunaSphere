@@ -11,6 +11,9 @@ public class PlayerControls : MonoBehaviour
     private bool IsMoving;
     public GameObject PlayerUI;
     public GameObject FaunaHolder;
+    public float distance;
+    public bool IsPollution = false;
+    public Vector3 PolPos;
 
 
     void Start()
@@ -31,6 +34,27 @@ public class PlayerControls : MonoBehaviour
             animator = fauna.GetComponent<Animator>();
 
             Movement();
+
+            if (IsPollution == true)
+            {
+                if (distance>= 1.5)
+                {
+                    OnPollutionClicked(PolPos);
+                }
+                else{
+                    target = transform.position;
+
+                    InteractableObject zap = FindObjectOfType<InteractableObject>();
+                    zap.Zap(transform.position, PolPos);
+
+                    IsMoving = false;
+                    animator.SetBool("IsMoving", false);
+                    IsPollution = false;
+                }
+
+            }
+
+
         }
 
     }
@@ -44,6 +68,13 @@ public class PlayerControls : MonoBehaviour
     void OnCollisionEnter2D(Collision2D col)
     {
         target = transform.position;
+    }
+
+    public void OnPollutionClicked(Vector3 PolPos)//is called when a pollution block is clicked 
+    {
+        IsPollution = true;
+        distance = Vector3.Distance(PolPos, transform.position);
+
     }
 
     private void Movement()
@@ -60,6 +91,7 @@ public class PlayerControls : MonoBehaviour
             {
                 Debug.Log("Its NOT over UI elements");
             }
+
 
             //Movement
             target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -82,8 +114,12 @@ public class PlayerControls : MonoBehaviour
 
         transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
 
+
+
+
         //Animation states for running
         if (transform.position == target) { IsMoving = false; }
+        if (IsPollution && distance<1) { IsMoving = false; }
         if (transform.position != target) { IsMoving = true; }
 
         if (IsMoving == true) animator.SetBool("IsMoving", true);
