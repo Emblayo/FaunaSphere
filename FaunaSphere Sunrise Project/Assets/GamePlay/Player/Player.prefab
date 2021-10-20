@@ -388,7 +388,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6765378838271372059}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.079, y: 0.224, z: 0}
+  m_LocalPosition: {x: 0.01, y: 0.68, z: 0}
   m_LocalScale: {x: 1.6444663, y: 1.6444663, z: 1.6444663}
   m_Children: []
   m_Father: {fileID: 7963352481382667909}
@@ -590,8 +590,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  animator: {fileID: 6976745572217505394}
   PlayerUI: {fileID: 4649587347898280468}
+  FaunaHolder: {fileID: 0}
+  distance: 0
+  IsPollution: 0
+  PolPos: {x: 0, y: 0, z: 0}
 --- !u!114 &8314407647385535018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -736,10 +739,5 @@ PrefabInstance:
 --- !u!4 &8845252709903557649 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2416428180308409520, guid: 5e39accb3c921c942a53b332b9759135, type: 3}
-  m_PrefabInstance: {fileID: 6577585154315409569}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &6976745572217505394 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 4294789154087608019, guid: 5e39accb3c921c942a53b332b9759135, type: 3}
   m_PrefabInstance: {fileID: 6577585154315409569}
   m_PrefabAsset: {fileID: 0}
