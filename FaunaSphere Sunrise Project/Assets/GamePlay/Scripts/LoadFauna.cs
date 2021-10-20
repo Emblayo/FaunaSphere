@@ -13,6 +13,7 @@ public class LoadFauna : MonoBehaviour
     public Color color;
     public string firstFaunaColor;
     public Transform faunaHolder;
+    public Transform faunaHolderAvatar;
 
 
     // Start is called before the first frame update
@@ -151,7 +152,7 @@ public class LoadFauna : MonoBehaviour
             string filepath = "Fauna/" + species+"_Prefab_01";
             GameObject inputFauna = Resources.Load<GameObject>(filepath);
             Instantiate(inputFauna, faunaHolder);
-            
+            Instantiate(inputFauna, faunaHolderAvatar);
             PlayerPrefs.SetString("FaunaLoaded", "true");
         }
         else if(species == "Sniffer"){
@@ -159,6 +160,7 @@ public class LoadFauna : MonoBehaviour
             string filepath = "Fauna/" + species + "_Prefab_01";
             GameObject inputFauna = Resources.Load<GameObject>(filepath);
             Instantiate(inputFauna, faunaHolder);
+            Instantiate(inputFauna, faunaHolderAvatar);
             PlayerPrefs.SetString("FaunaLoaded", "true");
         }
         else if(species == "Scooter")
