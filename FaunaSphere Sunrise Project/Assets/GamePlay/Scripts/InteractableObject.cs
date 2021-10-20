@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class InteractableObject : MonoBehaviour
 {
@@ -12,6 +14,8 @@ public class InteractableObject : MonoBehaviour
     private bool Action;
     public bool Pollution;
     public Vector3 PolPos;
+    public string ObjectName;
+    public TextMeshProUGUI nameText;
 
 
     void Awake()
@@ -60,6 +64,7 @@ public class InteractableObject : MonoBehaviour
     void OnMouseOver()
     {   
         rend.sharedMaterial = material[1];
+        nameText.text = ObjectName;
         UI.SetActive(true);
     }
 

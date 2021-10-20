@@ -280,6 +280,10 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 133aa7eb787e2914897bde1941a547d5, type: 2}
   UI: {fileID: 7561271800148021897}
   Player: {fileID: 0}
+  Pollution: 0
+  PolPos: {x: 0, y: 0, z: 0}
+  ObjectName: Default Name
+  nameText: {fileID: 4827174888072256106}
 --- !u!60 &141770718010079459
 PolygonCollider2D:
   m_ObjectHideFlags: 0

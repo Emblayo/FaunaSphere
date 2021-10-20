@@ -1873,6 +1873,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: b0e231d024f833847a2c6648502ff337, type: 3}
+    - target: {fileID: 5697020989309798926, guid: 03839862ed54eb748b2799c006f9a358, type: 3}
+      propertyPath: ObjectName
+      value: Pollution
+      objectReference: {fileID: 0}
     - target: {fileID: 7561271800148021897, guid: 03839862ed54eb748b2799c006f9a358, type: 3}
       propertyPath: m_IsActive
       value: 0

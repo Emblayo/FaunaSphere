@@ -301,6 +301,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prefab_Interactable_Tree
       objectReference: {fileID: 0}
+    - target: {fileID: 5697020989309798926, guid: 03839862ed54eb748b2799c006f9a358, type: 3}
+      propertyPath: ObjectName
+      value: Tree
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03839862ed54eb748b2799c006f9a358, type: 3}
 --- !u!4 &4737793137156985179 stripped
