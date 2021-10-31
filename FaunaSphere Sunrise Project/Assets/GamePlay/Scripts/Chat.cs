@@ -14,6 +14,7 @@ public class Chat : MonoBehaviour
     public TMP_InputField inputField;
     public string chatText;
     private TextMeshProUGUI bubbleText;
+    public Button sendButton;
 
     void Update()
     {
@@ -33,12 +34,17 @@ public class Chat : MonoBehaviour
 
         bubbleText.text = chatText;
 
+        inputField.text = "";
+
+        sendButton.interactable = false;
+
     }
 
     public void ReadText()
     {
-        //reading the text and applying it to this string
+        //reading the text and applying it to this public string
         Debug.Log("you changed the text");
         chatText = inputField.text;
+        sendButton.interactable = true;
     }
 }
