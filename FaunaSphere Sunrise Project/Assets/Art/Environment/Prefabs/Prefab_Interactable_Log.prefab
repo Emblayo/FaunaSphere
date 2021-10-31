@@ -1,5 +1,46 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1137842073002252669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9081660462553111829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000
+  m_ShapePath:
+  - {x: -0.8372958, y: -0.6018627, z: 0}
+  - {x: -0.58122945, y: -0.7072304, z: 0}
+  - {x: -0.006400891, y: -0.70517254, z: 0}
+  - {x: 1.0458986, y: -1.1979519, z: 0}
+  - {x: 1.2955638, y: -1.4906627, z: 0}
+  - {x: 1.6227112, y: -1.4734446, z: 0}
+  - {x: 1.7001935, y: -1.206561, z: 0}
+  - {x: 1.5624472, y: -1.0257691, z: 0}
+  - {x: 1.8723762, y: -0.99133235, z: 0}
+  - {x: 1.9929042, y: -0.8794132, z: 0}
+  - {x: 1.9326404, y: -0.45756546, z: 0}
+  - {x: 0.69094, y: -0.19017905, z: 0}
+  - {x: 0.51213145, y: 0.15368377, z: 0}
+  - {x: -0.27130058, y: 0.19672962, z: 0}
+  - {x: -0.6242753, y: 0.41195828, z: 0}
+  - {x: -1.1730527, y: 1.3594673, z: 0}
+  - {x: -1.743464, y: 1.264263, z: 0}
+  - {x: -1.9414746, y: 0.8079791, z: 0}
+  - {x: -1.5282358, y: 0.5497046, z: 0}
+  m_ShapePathHash: -548805327
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 173224
 --- !u!1001 &6877503618972338528
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1361,3 +1402,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03839862ed54eb748b2799c006f9a358, type: 3}
+--- !u!1 &9081660462553111829 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2412037177929061493, guid: 03839862ed54eb748b2799c006f9a358, type: 3}
+  m_PrefabInstance: {fileID: 6877503618972338528}
+  m_PrefabAsset: {fileID: 0}

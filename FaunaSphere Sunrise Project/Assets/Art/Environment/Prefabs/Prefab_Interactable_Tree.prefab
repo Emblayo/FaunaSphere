@@ -82,6 +82,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &104186514714707694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7312863443863062762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000
+  m_ShapePath:
+  - {x: -0.75691295, y: -2.0895267, z: 0}
+  - {x: -1.1699592, y: -2.0420187, z: 0}
+  - {x: -0.7944042, y: -2.2600827, z: 0}
+  - {x: -0.10322878, y: -2.2227883, z: 0}
+  - {x: 0.1875234, y: -1.9567739, z: 0}
+  - {x: -0.22386667, y: -2.065806, z: 0}
+  m_ShapePathHash: -978871943
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -143360
 --- !u!1 &5935672482360994414
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,5 +338,10 @@ PrefabInstance:
 --- !u!4 &4737793137156985179 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 415949954706312644, guid: 03839862ed54eb748b2799c006f9a358, type: 3}
+  m_PrefabInstance: {fileID: 4901540949602770079}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7312863443863062762 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2412037177929061493, guid: 03839862ed54eb748b2799c006f9a358, type: 3}
   m_PrefabInstance: {fileID: 4901540949602770079}
   m_PrefabAsset: {fileID: 0}
