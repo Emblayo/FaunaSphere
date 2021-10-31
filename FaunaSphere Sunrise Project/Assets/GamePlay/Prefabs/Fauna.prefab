@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 4989634044558673103}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1384288, y: 1.1384288, z: 1.1384288}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -55,5 +55,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fa04ed49217021449ada9f955503508, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sniffer: {fileID: 0}
-  Hoofer: {fileID: 0}
