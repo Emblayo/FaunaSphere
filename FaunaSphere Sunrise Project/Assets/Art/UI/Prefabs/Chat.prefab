@@ -107,7 +107,19 @@ MonoBehaviour:
   m_CharacterLimit: 100
   m_OnEndEdit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1445926924708601429}
+        m_TargetAssemblyTypeName: Chat, Assembly-CSharp
+        m_MethodName: ReadChatInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnSubmit:
     m_PersistentCalls:
       m_Calls: []
@@ -575,7 +587,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72bbd8370b5f3714490a0164f6da91a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "\xEFnputText": {fileID: 8715010184259799629}
+  chatLayout: {fileID: 0}
+  chatBubble: {fileID: 0}
+  inputField: {fileID: 8388438714501440200}
+  textDisplay: {fileID: 0}
+  chatText: 
 --- !u!1 &8388438714501440200
 GameObject:
   m_ObjectHideFlags: 0
@@ -588,7 +604,7 @@ GameObject:
   - component: {fileID: 3305014373967284766}
   - component: {fileID: 8715010184259799629}
   m_Layer: 5
-  m_Name: Text
+  m_Name: InputText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

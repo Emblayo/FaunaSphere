@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6203676859104676617}
   m_Layer: 5
   m_Name: ChatBubble
-  m_TagString: Untagged
+  m_TagString: Bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 3923425305246711138}
   - component: {fileID: 1681124626162896604}
   m_Layer: 5
-  m_Name: Text
+  m_Name: ChatBubbleText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

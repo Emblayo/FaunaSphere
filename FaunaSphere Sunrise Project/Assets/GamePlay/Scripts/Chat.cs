@@ -9,19 +9,36 @@ public class Chat : MonoBehaviour
 {
 
     public Transform chatLayout;
+    public GameObject chatLayoutGroup;
     public GameObject chatBubble;
-    public TextMeshProUGUI ïnputText;
+    public TMP_InputField inputField;
+    public string chatText;
+    private TextMeshProUGUI bubbleText;
 
-    // Start is called before the first frame update
-    void Start()
+    void Update()
     {
-        
+
     }
 
-    // Update is called once per frame
+
     public void CreateBubble()
     {
         Debug.Log("clicked Send");
+
+        //Creating the bubble
         Instantiate(chatBubble, chatLayout);
+
+        
+        bubbleText = chatLayoutGroup.GetComponentInChildren<TextMeshProUGUI>();
+
+        bubbleText.text = chatText;
+
+    }
+
+    public void ReadText()
+    {
+        //reading the text and applying it to this string
+        Debug.Log("you changed the text");
+        chatText = inputField.text;
     }
 }
