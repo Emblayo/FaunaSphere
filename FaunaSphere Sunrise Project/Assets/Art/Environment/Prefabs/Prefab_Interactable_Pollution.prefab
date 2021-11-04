@@ -56,7 +56,7 @@ MonoBehaviour:
   - {x: -0.16530198, y: -0.27771845, z: 0}
   m_ShapePathHash: -789620524
   m_Mesh: {fileID: 0}
-  m_InstanceId: 168952
+  m_InstanceId: 217296
 --- !u!1001 &4073003240761974457
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1910,7 +1910,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1995116180486567398, guid: 03839862ed54eb748b2799c006f9a358, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.17
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1995116180486567398, guid: 03839862ed54eb748b2799c006f9a358, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1920,6 +1920,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: b0e231d024f833847a2c6648502ff337, type: 3}
+    - target: {fileID: 4853989799460179795, guid: 03839862ed54eb748b2799c006f9a358, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5697020989309798926, guid: 03839862ed54eb748b2799c006f9a358, type: 3}
       propertyPath: ObjectName
       value: Pollution
@@ -1942,11 +1946,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7815570445087306033, guid: 03839862ed54eb748b2799c006f9a358, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.159
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7815570445087306033, guid: 03839862ed54eb748b2799c006f9a358, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.002
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 141770718010079459, guid: 03839862ed54eb748b2799c006f9a358, type: 3}
