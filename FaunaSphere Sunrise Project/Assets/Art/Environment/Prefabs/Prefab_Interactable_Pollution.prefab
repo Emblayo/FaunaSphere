@@ -56,7 +56,7 @@ MonoBehaviour:
   - {x: -0.16530198, y: -0.27771845, z: 0}
   m_ShapePathHash: -789620524
   m_Mesh: {fileID: 0}
-  m_InstanceId: 176130
+  m_InstanceId: 168952
 --- !u!1001 &4073003240761974457
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1891,6 +1891,22 @@ PrefabInstance:
     - target: {fileID: 415949954706312646, guid: 03839862ed54eb748b2799c006f9a358, type: 3}
       propertyPath: m_Name
       value: Prefab_Interactable_Pollution
+      objectReference: {fileID: 0}
+    - target: {fileID: 1578652546662303498, guid: 03839862ed54eb748b2799c006f9a358, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5696144
+      objectReference: {fileID: 0}
+    - target: {fileID: 1578652546662303498, guid: 03839862ed54eb748b2799c006f9a358, type: 3}
+      propertyPath: m_Size.y
+      value: 0.05578784
+      objectReference: {fileID: 0}
+    - target: {fileID: 1578652546662303498, guid: 03839862ed54eb748b2799c006f9a358, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.002604953
+      objectReference: {fileID: 0}
+    - target: {fileID: 1578652546662303498, guid: 03839862ed54eb748b2799c006f9a358, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.07216596
       objectReference: {fileID: 0}
     - target: {fileID: 1995116180486567398, guid: 03839862ed54eb748b2799c006f9a358, type: 3}
       propertyPath: m_AnchoredPosition.x
