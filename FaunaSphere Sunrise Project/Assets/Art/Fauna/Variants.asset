@@ -25,3 +25,12 @@ MonoBehaviour:
     - m_Name: Tail03
       m_Hash: -436574057
       m_Sprite: {fileID: 21300000, guid: 53a07b18081aeb84f92f5bfbaeea67ae, type: 3}
+  - m_Name: Bodies
+    m_Hash: -889928249
+    m_CategoryList:
+    - m_Name: Body01
+      m_Hash: -1983058150
+      m_Sprite: {fileID: 7807022321605435842, guid: 663d4039126f19347bc0d9fcd96c4194, type: 3}
+    - m_Name: Body02
+      m_Hash: 281394848
+      m_Sprite: {fileID: 21300000, guid: 3b4045d4f32b2de40a13707e65ffcfc9, type: 3}
